@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+.play-space{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-mark{
+    opacity: 0;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    transition: all 3s ease;
+}
+
+.user-played {
+    opacity: 100;
+    width: 60px;
+    height: 10px;
+}
+
+#mark1.user-played {
+    transform: rotate(45deg);
+}
+
+#mark2.user-played{
+    transform: rotate(-90deg);
+}
+
+
+
+}
+
