@@ -5,11 +5,10 @@
 }
 
 main{
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
-
 }
 
 .play-space{
@@ -43,7 +42,18 @@ main{
     transform: rotate(-90deg);
 }
 
-
-
+.line {
+    background-color: black;
 }
 
+ul{
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+.first-row{
+    display: grid;
+    grid-template-columns: 100px 10px 100px 10px 100px;
+}
