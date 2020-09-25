@@ -2,19 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
+body{
+    height: 100vh;
+}
 main{
-    display: flex;
+    display: grid;
+    grid-template-rows: 100px 10px 100px;
     align-items: center;
     justify-content: center;
     background-color: white;
+
 }
 
 .play-space{
     width: 100px;
     height: 100px;
-    background-color: green;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +31,7 @@ main{
     width: 5px;
     height: 5px;
     background-color: black;
-    transition: all 3s ease;
+    transition: all 2s ease;
 }
 
 .user-played {
@@ -33,6 +39,7 @@ main{
     width: 60px;
     height: 10px;
 }
+
 
 #mark1.user-played {
     transform: rotate(45deg);
@@ -56,4 +63,9 @@ li {
 .first-row{
     display: grid;
     grid-template-columns: 100px 10px 100px 10px 100px;
+}
+
+.horz-line {
+    background-color: black;
+    height: 10px;
 }
