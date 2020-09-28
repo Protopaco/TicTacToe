@@ -31,7 +31,7 @@ main{
     width: 5px;
     height: 5px;
     background-color: black;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 .user-played {
@@ -48,7 +48,6 @@ main{
     background-color: white;
     border: 10px solid black;
     display: inline-block;
-  
 }
 
 
@@ -71,7 +70,7 @@ ul{
 li {
     display: inline;
 }
-.first-row{
+.row-attributes{
     display: grid;
     grid-template-columns: 100px 10px 100px 10px 100px;
 }
