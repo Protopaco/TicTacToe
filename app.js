@@ -1,4 +1,8 @@
 import { checkWinState } from './winState.js';
+import { computerPlayer } from './computerPlayer.js';
+
+const results = document.getElementById('results');
+
 
 let space = '';
 let spaceCount = 0;
@@ -22,14 +26,16 @@ function playSpace(playMark){
         playMark[0].classList.add('user-played');
         playMark[1].classList.add('user-played');
         if(checkWinState(board)){
-            alert("you won!");
+            //results.style.display = 'flex';
+            results.classList.toggle('gameOver');
+            results.textContent = 'you won';
         }
         else{
-            console.log('no winner yet')
+            const computerMove = computerPlayer(board);
+            console.log(computerMove);
+            board[computerMove][0].classList.add("computer-played");
+            }
         }
     }
 
-
-
-}
 

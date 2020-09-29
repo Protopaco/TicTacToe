@@ -20,7 +20,6 @@ export function checkWinState(board){
             }
         }
         if (count === 3){
-
             return true;
         }
     }
