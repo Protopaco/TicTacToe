@@ -22,10 +22,10 @@ for (let i=0; i<9; i++){
 }
 
 function playSpace(playMark){
-    if (!playMark[0].classList.contains('user-played' || "computer-played")){
+    if (!playMark[0].classList.contains('user-played') && !playMark[0].classList.contains("computer-played")){
         playMark[0].classList.add('user-played');
         playMark[1].classList.add('user-played');
-        if(checkWinState(board)){
+        if(checkWinState(board,'user-played')){
             //results.style.display = 'flex';
             results.classList.toggle('gameOver');
             results.textContent = 'you won';
@@ -35,6 +35,11 @@ function playSpace(playMark){
             console.log(computerMove);
             board[computerMove][0].classList.add("computer-played");
             }
+            if(checkWinState(board, 'computer-played')){
+                results.classList.toggle('gameOver');
+                results.textContent = 'you lose';
+            }
+
         }
     }
 

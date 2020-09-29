@@ -10,12 +10,12 @@ const winCombos = [
 ]
 let count=0;
 
-export function checkWinState(board){
+export function checkWinState(board, player){
     //console.log(winCombos);
     for (const winCombo of winCombos) {
         count = 0;
         for (const pos of winCombo){
-            if (board[pos][0].classList.contains('user-played' || 'computer-played')) {
+            if (board[pos][0].classList.contains(player)) {
                 count++
             }
         }
